@@ -1,0 +1,23 @@
+[GENERATED OBJECT FILE]
+b__packages.o
+[PROJECT FILES]
+/home/fernando/Escritorio/ada_lang/03Packages/packages.gpr
+20251223223539 7df5e2cecc17e979ede75adc7739d238
+[BOUND OBJECT FILES]
+/home/fernando/Escritorio/ada_lang/03Packages/objs/week.o
+/home/fernando/Escritorio/ada_lang/03Packages/objs/packages.o
+[GENERATED SOURCE FILES]
+b__packages.ads
+b__packages.adb
+b__packages.ali
+[RESULTING OPTIONS]
+-L/home/fernando/Escritorio/ada_lang/03Packages/objs/
+-L/home/fernando/Escritorio/ada_lang/03Packages/objs/
+-L/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+-shared
+-shared-libgcc
+-lgnat-10
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+/usr/lib

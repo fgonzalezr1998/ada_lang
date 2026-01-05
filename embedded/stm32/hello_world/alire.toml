@@ -1,0 +1,21 @@
+name = "hello_world"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Fernando"]
+maintainers = ["Fernando <fergonzaramos@yahoo.es>"]
+maintainers-logins = ["fgonzalezr1998"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+executables = ["hello_world"]
+
+[[depends-on]]
+gnat_arm_elf = "^15.2.1"
+
+[[depends-on]]
+stm32_f4ve_sfp = "*"
+
+[[pins]]
+stm32_f4ve_sfp = { url='https://github.com/AdaCore/Ada_Drivers_Library', subdir='boards/stm32_f4ve' }

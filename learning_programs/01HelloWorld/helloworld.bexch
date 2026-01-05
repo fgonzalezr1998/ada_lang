@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__helloworld.o
+[PROJECT FILES]
+/usr/share/gpr/_default.gpr
+20200208122156 98288d889536ca2aa0877855c3f0db96
+[BOUND OBJECT FILES]
+/home/fernando/Escritorio/ada_lang/01HelloWorld//helloworld.o
+[GENERATED SOURCE FILES]
+b__helloworld.ads
+b__helloworld.adb
+b__helloworld.ali
+[RESULTING OPTIONS]
+-L/home/fernando/Escritorio/ada_lang/01HelloWorld/
+-L/home/fernando/Escritorio/ada_lang/01HelloWorld//
+-L/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+-shared
+-shared-libgcc
+-lgnat-10
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+/usr/lib

@@ -1,0 +1,6 @@
+{
+    "ada.projectFile": "packages.gpr",
+    "terminal.integrated.env.linux": {
+        "PATH": "/usr/bin:${env:PATH}"
+    }
+}

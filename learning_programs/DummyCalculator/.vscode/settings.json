@@ -1,0 +1,28 @@
+{
+    "ada.projectFile": "dummy_calculator.gpr",
+    "terminal.integrated.env.linux": {
+        "PATH": "${env:PATH}",
+        "ADA_INCLUDE_PATH": "/usr/lib/gcc/x86_64-linux-gnu/12/adainclude",
+        "ADA_OBJECTS_PATH": "/usr/lib/gcc/x86_64-linux-gnu/12/adalib"
+    },
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__fact.o
+[PROJECT FILES]
+/home/fernando/Escritorio/ada_lang/02Fact/fact.gpr
+20251223222109 cf0bd693d5a937dc776ba073801f0550
+[BOUND OBJECT FILES]
+/home/fernando/Escritorio/ada_lang/02Fact/objs/fact.o
+[GENERATED SOURCE FILES]
+b__fact.ads
+b__fact.adb
+b__fact.ali
+[RESULTING OPTIONS]
+-L/home/fernando/Escritorio/ada_lang/02Fact/objs/
+-L/home/fernando/Escritorio/ada_lang/02Fact/objs/
+-L/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+-shared
+-shared-libgcc
+-lgnat-10
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+/usr/lib

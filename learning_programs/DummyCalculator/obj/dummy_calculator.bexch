@@ -1,0 +1,24 @@
+[GENERATED OBJECT FILE]
+b__dummy_calculator.o
+[PROJECT FILES]
+/home/fernando/Escritorio/ada_lang/DummyCalculator/dummy_calculator.gpr
+20260105154511 14968853ffd6050801b6e0f80a2b71b4
+[BOUND OBJECT FILES]
+/home/fernando/Escritorio/ada_lang/DummyCalculator/obj/calculator.o
+/home/fernando/Escritorio/ada_lang/DummyCalculator/obj/dummy_calculator.o
+[GENERATED SOURCE FILES]
+b__dummy_calculator.ads
+b__dummy_calculator.adb
+b__dummy_calculator.ali
+[RESULTING OPTIONS]
+-L/home/fernando/Escritorio/ada_lang/DummyCalculator/obj/
+-L/home/fernando/Escritorio/ada_lang/DummyCalculator/obj/
+-L/usr/lib/gcc/x86_64-linux-gnu/12/adalib/
+-L/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+-shared
+-shared-libgcc
+-lgnat-10
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/10/adalib/
+/usr/lib
