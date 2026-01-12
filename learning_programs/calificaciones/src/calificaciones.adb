@@ -5,7 +5,7 @@ with Ada.Strings.Maps;        use Ada.Strings.Maps;
 with Ada.Strings.Fixed;
 with Ada.Strings.Unbounded;
 
-with Alumns;                  use Alumns;
+with Alumns;
 with Utils;
 
 procedure Calificaciones is
@@ -21,12 +21,31 @@ procedure Calificaciones is
 
       type TokensArr is array (1 .. MAX_TOKENS) of Unbounded_String;
 
-      function Alumn (Tokens : TokensArr; Al : out AlumnType) return Boolean is
+      function Alumn (Tokens : TokensArr; Al : out Alumns.AlumnType) return Boolean is
+         Parse_Error : Boolean := False;
       begin
-         return Utils.Is_Str (Tokens (1));
+         --  Name and surname shall be strings with no numbers nor special characters
+         if Utils.Is_Str (Tokens (1)) and then Utils.Is_Str (Tokens (2)) then
+            Al.Name := Tokens (1);
+            Al.Surname := Tokens (2);
+         else
+            Parse_Error := True;
+         end if;
+
+         if not Parse_Error and then Utils.Is_NIF (Tokens (3)) then
+            Al.NIF := Tokens (3);
+         else
+            Parse_Error := True;
+         end if;
+
+         if not Parse_Error then
+            Parse_Error := not Utils.Get_Float (Tokens (MAX_TOKENS), Al.Mark);
+         end if;
+
+         return (not Parse_Error);
       end Alumn;
 
-      function Line_2_Alumn (Line : String; Al : out AlumnType) return Boolean is
+      function Line_2_Alumn (Line : String; Al : out Alumns.AlumnType) return Boolean is
          I : Natural := 1;
          F : Positive;
          L : Natural;
@@ -46,8 +65,7 @@ procedure Calificaciones is
             if (L - F) > MAX_TOKEN_LEN then
                L := F + MAX_TOKEN_LEN;
             end if;
-            Put_Line ("Word " & Line (F .. L) & ": from" & Positive'Image (F) & " to" & Natural'Image (L));
-            --  Tokens (Token_Index) := TokenType (Line (F .. L));
+
             Tokens (Token_Index) := To_Unbounded_String (Line (F .. L));
             I := L + 1;
             Token_Index := Token_Index + 1;
@@ -60,7 +78,7 @@ procedure Calificaciones is
          end if;
       end Line_2_Alumn;
 
-      function Read_Alumn (F : File_Type; Al : out AlumnType) return Boolean is
+      function Read_Alumn (F : File_Type; Al : out Alumns.AlumnType) return Boolean is
          Line  : String (1 .. MAX_LINE_LEN);
          Len   : Natural;
       begin
@@ -69,7 +87,7 @@ procedure Calificaciones is
       end Read_Alumn;
 
       F     : File_Type;
-      Al    : AlumnType;
+      Al    : Alumns.AlumnType;
    begin
       Open (F, In_File, INPUT_FILENAME);
 
@@ -77,6 +95,7 @@ procedure Calificaciones is
          if Read_Alumn (F, Al) then
             --  Save Alumn in linked list
             Put_Line ("Alumno Leido");
+            Alumns.Push_Alumn (Al);
          else
             Put_Line ("alumno Incorrecto");
          end if;
@@ -87,7 +106,8 @@ procedure Calificaciones is
 
 begin
    Load_Marks;
-   Ada.Text_IO.Put_Line ("Hello World");
+   Put_Line ("----------");
+   Alumns.Print_List;
    exception
       when Ada.IO_Exceptions.Name_Error =>
          Ada.Text_IO.Put_Line ("[ERROR] Input file doesn't exist!");
